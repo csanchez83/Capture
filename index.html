@@ -4,7 +4,7 @@
 <title>Example 12-1</title>
     <meta name="viewport" content="width=device-width, height=device-height initial-scale=1.0, maximum-scale=1.0, user-scalable=no;" />
     
-    <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: ms-appdata: https://ssl.gstatic.com 'unsafe-eval'; style-src 'self' 'unsafe-inline'; media-src *" />
+    
     
     <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
     <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
@@ -70,7 +70,10 @@
                 for( i = 0, len; i < len; i += 1) 
                 {
                     alert(fileList[i].fullPath);
-                    htmlStr += '<li><a href="' + fileList[i].fullPath + '">' + fileList[i].name + '</a></li>';
+                    //htmlStr += '<li><a href="' + fileList[i].fullPath + '">' + fileList[i].name + '</a></li>';
+                    htmlStr += '<li><a href="' + fileList[i].fullPath + '" target="_blank">' + fileList[i].name + '</a></li>';
+                    //htmlStr += '<li>';
+                    //htmlStr += '<a href="#" onClick=window.open(' + fileList[i].fullPath
                 }
                 
                 htmlStr += "</ol>";
